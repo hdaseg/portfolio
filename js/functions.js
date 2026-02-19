@@ -1,7 +1,10 @@
-function showDiv(id) {
+function showDiv(id,id2,id3) {
   const div = document.getElementById(id);
+  const div2 = document.getElementById(id2);
+  const div3 = document.getElementById(id3);
 
-  if (div.style.display === "block") {
+
+  if (div.style.display === "block" || div2.style.display === "block" || div3.style.display === "block") {
     div.style.display = "none";
   } else {
     div.style.display = "block";

@@ -1,3 +1,10 @@
+h5, h3{
+    text-align: left;
+}
+p {
+    text-align: justify;
+}
+
 *{
     color: white;
 }
@@ -18,16 +25,16 @@
 }
 .center-box2 {
   position: absolute;
-  top: 40%;
+  top: 10%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
 }
 .info-box {
   position: absolute;
-  width: 787px;
+  width: 750px;
   top: 40%;
   left: 30%;
   transform: translate(-50%, -50%);
@@ -74,7 +81,7 @@
 body {
     height: 100vh;
     background: linear-gradient(50deg, #06474d 0%, #99151d 25%, #813d9c 50%, #25476f 75%);
-    background-size: 200% 200%; animation: animated-gradient-flow 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    background-size: 350% 350%; animation: animated-gradient-flow 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes animated-gradient-flow {
@@ -105,13 +112,7 @@ body {
     transition: transform .2s;
 }
 .icon:hover{
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-img{
-    transition: transform .2s;
-}
-img:hover{
-    transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ 
+      transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 i{

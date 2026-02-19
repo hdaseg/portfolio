@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/stylesExtra.css">
+    <link rel="stylesheet" href="/styles/stylesCarrousel.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+    <div class="d-flex justify-content-center">
+        <h1 class="mt-5">Salud Total</h1>
+        <div class="center-box2">
+            <div class="section">
+                <div class="d-flex justify-content-between">
+                    <h3 style="text-align: left;" class="mb-3">Sobre el proyecto</h3>
+                    <a href="/index.html" style="color: white;" class="bi bi-arrow-return-left fs-5"></a>
+                </div>
+                <img src="/assets/imgs/Salud_TotalLogo.png" alt="" height="150px" class="float-start me-3 mb-3">
+                <p>Este sistema web fue desarrollado como un trabajo académico para la gestión de inventarios en una farmacia. El proyecto se centra en centralizar los datos de los medicamentos, permitiendo realizar las operaciones básicas de registro, consulta, actualización y eliminación (CRUD). El sistema facilita el control de existencias y la administración de proveedores, optimizando los procesos de entrada y salida de productos a través de una interfaz sencilla.</p>
+            </div>
+            <div class="section">
+                <h3 class="mb-3">Tecnologías Usadas</h3>
+                <h5>HTML</h5>
+                <p>Se utilizó para estructurar de manera semántica y sólida cada uno de los módulos del sistema (Inventario, Inicio de sesión, etc). El enfoque principal fue garantizar una jerarquía de información clara, permitiendo que los formularios de registro y las tablas de consulta fueran accesibles y fáciles de navegar.</p>
+                <h5>CSS</h5>
+                <p>Se empleó para la personalización detallada de la interfaz, permitiendo ajustar estilos específicos que refuerzan la identidad visual de la farmacia. Se trabajó en la legibilidad de tipografías y el diseño de componentes visuales únicos.</p>
+                <h5>JavaScript</h5>    
+                <p>Aportó la interactividad necesaria para que la gestión fuera fluida y dinámica. Se implementó lógica en el lado del cliente para la validación de formularios y para confirmar acciones importantes como la eliminación de registros.</p>
+                <h5>PHP</h5>
+                <p>Actúa como el motor del lado del servidor, gestionando la lógica de negocio y la comunicación con la base de datos. Se utilizó para procesar las operaciones CRUD (Crear, Leer, Actualizar y Eliminar), administrar las sesiones de usuario y asegurar que el control de existencias se actualice de forma precisa con cada entrada y salida del inventario.</p>
+                <h5>Bootstrap</h5>
+                <p>Se utilizó como el desarrollo principal de diseño para garantizar un desarrollo ágil y una estructura totalmente responsiva. Gracias a su sistema de rejilla y componentes predefinidos como tarjetas, botones y barras de navegación, se logró una interfaz profesional, estandarizada y adaptable a cualquier tamaño de pantalla.</p>
+            </div>
+            <div class="section">
+                <h3 class="mb-3">Galería</h3>
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"></button>
+                        </div>
+
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="/assets/imgs/Salud_Total1.png" alt="Slide 1">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/assets/imgs/Salud_Total2.png" alt="Slide 2">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/assets/imgs/Salud_Total3.png" alt="Slide 3">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/assets/imgs/Salud_Total4.png" alt="Slide 4">
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="/assets/imgs/Salud_Total5.png" alt="Slide 5">
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </button>
+
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
