@@ -1,139 +1,199 @@
-*{
+* {
     color: white;
+    box-sizing: border-box;
 }
 
-.center-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-.center-box2 {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-}
-.info-box {
-  position: absolute;
-  width: 787px;
-  top: 40%;
-  left: 30%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  z-index: 3;
-}
-.section{
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  margin: 20px
-}
-
-.button{
-  background: transparent;
-  padding: 5px 15px;
-  width: fit-content;
-  align-items: center;
-  font-size: 17px;
-  font-weight: 600;
-  text-decoration: none;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 25px;
-  outline: none;
-  cursor: default;
-  overflow: hidden;
-  color: rgb(255, 255, 255);
-  transition: color 0.3s 0.1s ease-out;
-  margin: 0px 0 10px 0;
-}
-.button:hover{
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-}
-
+/* ── BODY ─────────────────────────────────────────────── */
 body {
-    height: 100vh;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
     background: linear-gradient(50deg, #06474d 0%, #99151d 25%, #813d9c 50%, #25476f 75%);
-    background-size: 200% 200%; animation: animated-gradient-flow 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+    background-size: 200% 200%;
+    animation: animated-gradient-flow 15s cubic-bezier(0.4, 0, 0.2, 1) infinite;
 }
 
 @keyframes animated-gradient-flow {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
-#infoDiv{
-    display: none;
-}
-#trabajoDiv{
-    display: none;
-}
-#meDiv{
-    display: none;
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
+/* ── PAGE WRAPPER ─────────────────────────────────────── */
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+/* ── CENTER-BOX ───────────────────────────────────────── */
+.center-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 2rem 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* ── INFO-BOX ─────────────────────────────────────────── */
+.info-box {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* ── SECTION ──────────────────────────────────────────── */
+.section {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin: 10px 0;
+    width: 100%;
+}
+
+/* ── ICONS ────────────────────────────────────────────── */
 .icon {
-    margin: 20px;
+    margin: 10px;
     text-decoration: none;
     cursor: pointer;
-    transition: transform .2s;
+    transition: transform 0.2s;
 }
-.icon:hover{
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+.icon:hover { transform: scale(1.1); }
+
+/* ── BUTTONS ──────────────────────────────────────────── */
+.button {
+    background: transparent;
+    padding: 5px 15px;
+    width: fit-content;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 25px;
+    outline: none;
+    cursor: default;
+    overflow: hidden;
+    color: rgb(255, 255, 255);
+    transition: color 0.3s 0.1s ease-out;
+    margin: 0 4px 10px 4px;
 }
-img{
-    transition: transform .2s;
+.button:hover { transform: scale(1.1); }
+
+/* ── IMAGES ───────────────────────────────────────────── */
+img {
+    transition: transform 0.2s;
     border-radius: 15px;
     box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    max-width: 100%;
+    height: auto;
 }
-img:hover{
-    transform: scale(1.03); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */ 
-}
+img:hover { transform: scale(1.03); }
 
-i{
-    color: white;
-}
+i { color: white; }
 
+/* ── FOOTER ───────────────────────────────────────────── */
 .footer-box {
-  position: absolute;
-  top: 90%;
-  left: 50%;
-  width: 100%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
+/* ── PANEL VISIBILITY ─────────────────────────────────── */
+#infoDiv    { display: none; }
+#trabajoDiv { display: none; }
+#meDiv      { display: none; }
+
+/* ── DESKTOP: restore floating draggable panels ──────── */
+@media (min-width: 768px) {
+    body {
+        height: 100vh;
+        overflow: hidden;
+    }
+    .page-wrapper {
+        position: relative;
+        height: 100vh;
+        padding: 0;
+        gap: 0;
+    }
+    .center-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        max-width: none;
+        margin: 0;
+    }
+    .info-box {
+        position: absolute;
+        width: 787px;
+        top: 40%;
+        left: 40%;
+        transform: translate(-50%, -50%);
+        max-width: none;
+        margin: 0;
+        z-index: 3;
+    }
+    #trabajoDiv {
+        overflow-y: scroll;
+        max-height: 652px;
+    }
+    .footer-box {
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        max-width: none;
+        margin: 0;
+        border-radius: 0;
+    }
+    .section {
+        margin: 20px;
+        width: auto;
+    }
+}
+
+/* ── MOBILE TWEAKS ────────────────────────────────────── */
+@media (max-width: 767px) {
+    .center-box h1   { font-size: 1.6rem; }
+    .center-box h2   { font-size: 1.1rem; }
+    .icon h5         { font-size: 0.85rem !important; }
+    .icon .fs-1      { font-size: 1.8rem !important; }
+
+    /* Project images: full width, not floating */
+    .info-box img.float-start {
+        float: none !important;
+        display: block;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 0 1rem 0 !important;
+    }
+}
